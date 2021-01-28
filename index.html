@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ksenija Filatova - Converter</title>
+    <link rel="stylesheet" href="./css/style.css">
+<style>
+
+</style>
+</head>
+<body>
+    <div class="container converter-form">
+        
+        <div class="convertFrom-value">
+            <h4 class="title">Введите конвертируемую величину:</h4>
+            <input type="text" maxlength="10" id="convertValueNumber" class="convert-value__number" placeholder="введите значение">
+            <label for="convertValueNumber" class="convert-value__number_label"></label>
+            <select name="convertValueUnit" id="convertValueUnit" class="convert-value__unit">
+                <option value="" hidden="">ваш выбор</option>
+                <option value="m">метры</option>
+                <option value="cm">сантиметры</option>
+                <option value="in">дюймы</option>
+                <option value="ft">футы</option>
+            </select>
+        </div>
+        
+        <div class="convertTo_value">
+            <h4 class="title">Конвертировать в:</h4>
+            <select name="convertValueUnitNew" id="convertValueUnitNew" class="convert-value__unit">
+                <option value="" hidden="hidden">ваш выбор</option>
+                <option value="m">метры</option>
+                <option value="cm">сантиметры</option>
+                <option value="in">дюймы</option>
+                <option value="ft">футы</option>
+            </select>
+            <label for="convertValueUnitNew" class="convert-value__unit_label"></label>
+        </div>
+        
+        <div class="result hideblock">
+            <h4 class="title">Результат:</h4>
+            <div class="result__value"></div>
+            <div class="result__value-solution"></div>
+        </div>
+        
+        <div class="press-button ">
+            <div class="button button_user">Считать</div>
+        </div>
+        
+        
+    </div>
+    
+    <div class="container admin-form hideblock">
+        
+        <h3 class="main-title">Зададим правила конвертации</h3>
+        <h4 class="title">Введите крaткое обозначение:</h4>
+        <div class="admin_input"><input type="text" id="placeValueUnitShot" class="place-value__unit-shot" placeholder="введите крaткое обозначение">
+            <label for="placeValueUnitShot"></label></div>
+            <h4 class="title">Введите полное обозначение:</h4>
+            <div class="admin_input"><input type="text" id="placeValueUnitFull" class="place-value__unit-full" placeholder="введите полное обозначение">
+                <label for="placeValueUnitFull"></label>
+            </div>
+            <h4 class="title">Введите коэффициент:</h4>
+            <div class="admin_input"><input type="text" min="0" id="placeValueCoefficient" class="place-value__coefficient" placeholder="отношение к метрам">
+                <label for="placeValueCoefficient"></label>
+            </div>
+                    
+            <div class="button-form_rule">
+                <div class="button button_rule-add noactive">Добавить правило</div>
+                <div class="button button_rule-cancel">Отменить</div>
+            </div>
+                    
+        </div>
+                
+                        
+        <div class="container admin-button">
+                    
+            <div class="button button_admin"><span class="text-coloring_pink">Добавить</span> <span class="text-coloring_orange">единицы</span> <span class="text-coloring_yellow">измерения</span></div>
+                                
+        </div>
+
+        <div class="get"></div>
+        <div class="change"></div>
+        <div class="set"></div>
+
+                
+    <script src="./js/libs/jquery-3.5.1.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
